@@ -27,6 +27,7 @@ group :production, :development, :test do
 	gem 'faker', '~> 1.6.3'
 end
 
+gem 'rails_12factor'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
