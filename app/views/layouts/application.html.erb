@@ -16,24 +16,37 @@
                     <span class="sr-only">Toggle navigation</span>
                     Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+                <%= link_to "Home", root_path, {:class => "navbar-brand"} %>
             </div>
+
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
+                   <!--  <li>
                         <a href="index.html">Home</a>
-                    </li>
+                    </li> -->
                     <li>
                         <a href="about.html">去後台</a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="post.html">Sample Post</a>
-                    </li>
+                    </li> -->
                     <li>
-                        <a href="contact.html">Contact</a>
+                           <% if author_signed_in? %>  
+                            <%= link_to "Welcom! #{current_author.email}" , "#" %>
+                            
                     </li>
+         <li>
+     <%= link_to "log out", destroy_author_session_path, :method => 'delete' %>  
+     </li>
+     <% else %>  
+     <li>
+     <%= link_to "Log In", new_author_session_path%>  
+    </li>
+     <% end %>  
+
+                    
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

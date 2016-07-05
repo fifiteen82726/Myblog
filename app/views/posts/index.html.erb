@@ -26,10 +26,10 @@
       </div>
       <% @posts.each do |post| %>
       <div class="post-preview">
-        <a href="post.html">
-          <h2 class="post-title">
-            <%= post.title %>
-          </h2>
+        
+        <h2 class="post-title">
+         <%= link_to post.title, post %>
+        </h2>
           <h3 class="post-subtitle">
             <%= post.content %>
           </h3>

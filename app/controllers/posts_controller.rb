@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
-
+  before_action :check_login, only: [:new, :edit, :update, :destroy]
   # GET /posts
   # GET /posts.json
   def index
@@ -74,4 +74,13 @@ class PostsController < ApplicationController
     def post_params
       params.require(:post).permit(:title, :contet)
     end
+
+    #檢查是否登入了，沒登入就去登入畫面
+    def check_login  
+      if !current_author  
+       redirect_to new_author_session_path  
+      end  
+    end  
 end
+
+
