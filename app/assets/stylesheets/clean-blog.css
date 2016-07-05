@@ -24,7 +24,7 @@ h6 {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 800;
 }
-a {
+/*a {
   color: #333333;
 }
 a:hover,
@@ -34,7 +34,7 @@ a:focus {
 a img:hover,
 a img:focus {
   cursor: zoom-in;
-}
+}*/
 blockquote {
   color: #777777;
   font-style: italic;
@@ -216,7 +216,7 @@ hr.small {
   }
 }
 .post-preview > a {
-  color: #333333;
+  /*color: #333333;*/
 }
 .post-preview > a:hover,
 .post-preview > a:focus {

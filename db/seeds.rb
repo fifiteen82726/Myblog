@@ -8,6 +8,6 @@
 
 Post.destroy_all
 
-10.times do |i| 
+100.times do |i| 
 Post.create(title: Faker::Name.title, content: Faker::Hipster.paragraph)
 	end
