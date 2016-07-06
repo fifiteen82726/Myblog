@@ -2,26 +2,32 @@
 <%= render 'header'%>
 
 <p>
-  <strong>Title:</strong>
-  <%= @post.title %>
+	<strong>Title:</strong>
+	<%= @post.title %>
 </p>
 
 <p>
-  <strong>Content:</strong>
-  <%= @post.content %>
+	<strong>Content:</strong>
+	<%= @post.content %>
 </p>
 
 <p>
 
 
-  <% if @post.author_id != nil %>
-  Created by <%= @post.author.email %>
+	<% if @post.author_id != nil %>
+	Created by <%= @post.author.email %>
 
-  <% else %>
-  Created by Faker
-  <% end %>
+	<% else %>
+	Created by Faker
+	<% end %>
 </p>
-<%= link_to 'Edit', edit_post_path(@post) %> |
+
+<% if can? :update, @post %>  
+<%= link_to "Edit", edit_post_path(@post) %>  
+<% end %>  
+
+
+<%#= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>
 
 <%= render 'disqus' %>
