@@ -12,8 +12,14 @@
 </p>
 
 <p>
-  <strong>Content:</strong>
+
+
+  <% if @post.author_id != nil %>
   Created by <%= @post.author.email %>
+
+  <% else %>
+  Created by Faker
+  <% end %>
 </p>
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>
