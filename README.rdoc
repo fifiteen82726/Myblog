@@ -4,7 +4,7 @@
 網站使用者可以檢視個別文章內容與其所屬評論 -> ok
 網站使用者可在檢視個別文章內容時留下評論留言 -> ok
 網站使用者可以註冊與登入成為 Author (請以 Devise 套件完成) -> ok
-Author 可以建立、編輯與刪除個別文章
+Author 可以建立、編輯與刪除個別文章 -> ok
 需建立網站管理後台 (請以 ActiveAdmin 套件完成) 並加入網站管理員 (AdminUser)
 網站管理員可登入網站管理後台直接管理 Author、Post & Comment
 請調整網站管理後台的登入授權以 Google OAuth 完成 (即可使用 Google Account 完成登入)

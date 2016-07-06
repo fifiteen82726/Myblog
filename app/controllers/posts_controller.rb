@@ -4,7 +4,8 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts =  Post.paginate(:page => params[:page])
+    @posts =  Post.paginate(:page => params[:page]).order('created_at DESC')
+     
     #@posts_paginate =
 
   end
@@ -65,6 +66,13 @@ class PostsController < ApplicationController
     end
   end
 
+  def user_post
+    user = current_author if current_author
+    post = Post.where(author_id: user.id)
+
+    @posts =  post.paginate(:page => params[:page]).order('created_at DESC')
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post
@@ -73,7 +81,7 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :contet)
+      params.require(:post).permit(:title, :content)
     end
 
     #檢查是否登入了，沒登入就去登入畫面

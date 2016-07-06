@@ -24,27 +24,38 @@
       <div class="digg_pagination">
         <%= will_paginate @posts, :container => false %>
       </div>
+      <br>
+      <div>
+        <%= link_to 'New Post', new_post_path, {:class => 'btn btn-default'} %>
+      </div>
       <% @posts.each do |post| %>
       <div class="post-preview">
-        
+
         <h2 class="post-title">
          <%= link_to post.title, post %>
-        </h2>
-          <h3 class="post-subtitle">
-            <%= post.content %>
-          </h3>
-        </a>
-        <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on August 24, 2014</p>
-      </div>
+       </h2>
+       <h3 class="post-subtitle">
+        <%= post.content %>
+      </h3>
+    </a>
+    <p>
+      <% if post.author_id != nil %>
+      Created by <%= post.author.email %>
 
-      <hr>  
+      <% else %>
+      Created by Faker
       <% end %>
-
-
-    </div>
+    </p>
   </div>
 
+  <hr>  
+  <% end %>
 
-<%= link_to 'New Post', new_post_path %>
+
+</div>
+</div>
+
+
+
 </div>
 
