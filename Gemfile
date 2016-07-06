@@ -33,7 +33,7 @@ gem 'awesome_print'
 
 gem 'will_paginate', '~> 3.1.0'
 
-gem 'bootstrap-sass', '~> 3.3.6'
+
 
 gem 'devise'  
 gem 'cancancan'  
