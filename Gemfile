@@ -33,7 +33,7 @@ gem 'awesome_print'
 
 gem 'will_paginate', '~> 3.1.0'
 
-
+gem 'pry-rails'
 
 gem 'devise'  
 gem 'cancancan'  

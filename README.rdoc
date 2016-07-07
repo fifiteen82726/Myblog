@@ -1,12 +1,20 @@
 * 以 Ruby on Rails 開發簡單部落格, 詳細規格如下:
 此部落格含 Author (作者)、Post (文章)、Comment (評論留言) 三基本元素
+
 網站使用者可以分頁瀏覽文章列表 -> ok
+
 網站使用者可以檢視個別文章內容與其所屬評論 -> ok
+
 網站使用者可在檢視個別文章內容時留下評論留言 -> ok
+
 網站使用者可以註冊與登入成為 Author (請以 Devise 套件完成) -> ok
+
 Author 可以建立、編輯與刪除個別文章 -> ok
+
 需建立網站管理後台 (請以 ActiveAdmin 套件完成) 並加入網站管理員 (AdminUser)
+
 網站管理員可登入網站管理後台直接管理 Author、Post & Comment
+
 請調整網站管理後台的登入授權以 Google OAuth 完成 (即可使用 Google Account 完成登入)
 
 * 以上開發的專案程式請置於 Github，以讓我們了解你的開發過程。
